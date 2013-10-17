@@ -1,0 +1,20 @@
+#####################################################################################################################
+# TOOL: DOM PARSER
+# Date:  	OCT 2013
+# Author:	tallis.vanek@adtran.com
+##################################################################################################################### 
+
+#control ids that should be included in the audit list as mandatory fields (non-dynamic)
+filter: combobox, textfield, panel, button, image, tab
+
+#do not include the follow control ids if they pass through the regEx
+exclude: ext, tabbar
+
+# full path from project directory : 
+#	"#{project_dir}/tools/dom_audit/dom_audit_webdriver.rb"
+#	/mnt/CAMERO/WT/webrobot-suite/tools/dom_audit/dom_audit_webdriver.rb
+dom_audit_webtester_rb: "/webtools/dom_audit/dom_audit_webdriver.rb"
+
+
+#
+html_output_directory: "/srv/www/webrobot/webrobot_app/app/views/static/"

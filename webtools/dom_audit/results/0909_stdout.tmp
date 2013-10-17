@@ -1,0 +1,107 @@
+Rakefile Args were: {:url=>"http://10.10.9.129/LocalAdmin/index.php", :username=>"3011", :userpass=>"1234"}
+url:/t/t/t http://10.10.9.129/LocalAdmin/index.php
+username:/t/t/t3011
+userpass:/t/t/t1234
+-- Display all set parameters --
+WR_DISPLAY:     		 :5
+FILE            		 /mnt/CAMERO/WT/webrobot-suite/webtools/dom_audit/dom_audit_webdriver.rb
+WR_INTERFACE:   		 local
+WR_RUNFILTER:   		 
+WR_FORCEDISPLAY:		 
+WR_FFONLY:      		 
+WR_NOTUNNEL:    		 
+/usr/bin/ruby1.9.1 -S rspec /mnt/CAMERO/WT/webrobot-suite/webtools/dom_audit/dom_audit_webdriver.rb -f documentation --color
+Arguments passed to webdriver testcode
+url:       http://10.10.9.129/LocalAdmin/index.php
+username:  3011
+userpass:  1234
+login url: http://10.10.9.129
+Run options: include {:local=>true}
+
+Inspect the webpage to scrape the DOM object
+-- [LOCAL] Starting firefox :
+[2013-10-17 13:43:29 -0400] Logging in
+[2013-10-17 13:43:29 -0400] Opening webpage
+[2013-10-17 13:43:30 -0400] Finding login element
+[2013-10-17 13:43:30 -0400] Finding password element
+[2013-10-17 13:43:30 -0400] Finding  submit element
+[2013-10-17 13:43:39 -0400] Requesting DOM object
+[2013-10-17 13:43:40 -0400] Finding html element
+[2013-10-17 13:43:40 -0400] Dumping DOM object to STDOUT
+[2013-10-17 13:43:40 -0400] Parsing the DOM structure for each ID
+[2013-10-17 13:43:40 -0400] Found the fllowing dynamic IDs
+[STATIC] ext-gen1018
+[STATIC] container-1010
+[STATIC] container-1010-innerCt
+[STATIC] container-1010-targetEl
+[STATIC] image-1011
+[STATIC] image-1012
+[STATIC] label-1013
+[STATIC] container-1014
+[STATIC] container-1014-outerCt
+[STATIC] container-1014-innerCt
+[STATIC] topBarButtons-1015
+[STATIC] topBarButtons-1015-innerCt
+[STATIC] topBarButtons-1015-targetEl
+[STATIC] menuseparator-1016
+[STATIC] menuseparator-1017
+[STATIC] searchbar-1018
+[STATIC] searchbar-1018-inputRow
+[STATIC] searchbar-1018-labelCell
+[STATIC] searchbar-1018-labelEl
+[STATIC] searchbar-1018-bodyEl
+[STATIC] searchbar-1018-triggerWrap
+[STATIC] searchbar-1018-inputCell
+[STATIC] searchbar-1018-inputEl
+[STATIC] ext-gen1106
+[STATIC] ext-gen1105
+[STATIC] searchbar-1018-sideErrorCell
+[STATIC] searchbar-1018-errorEl
+[STATIC] tabbar-1019
+[STATIC] tabbar-1019-body
+[STATIC] tabbar-1019-before-scroller
+[STATIC] tabbar-1019-innerCt
+[STATIC] tabbar-1019-targetEl
+[STATIC] tab-1029
+[STATIC] tab-1029-btnWrap
+[STATIC] tab-1029-btnEl
+[STATIC] tab-1029-btnInnerEl
+[STATIC] tab-1029-btnIconEl
+[STATIC] tab-1030
+[STATIC] tab-1030-btnWrap
+[STATIC] tab-1030-btnEl
+[STATIC] tab-1030-btnInnerEl
+[STATIC] tab-1030-btnIconEl
+[STATIC] tab-1031
+[STATIC] tab-1031-btnWrap
+[STATIC] tab-1031-btnEl
+[STATIC] tab-1031-btnInnerEl
+[STATIC] tab-1031-btnIconEl
+[STATIC] tab-1032
+[STATIC] tab-1032-btnWrap
+[STATIC] tab-1032-btnEl
+[STATIC] tab-1032-btnInnerEl
+[STATIC] tab-1032-btnIconEl
+[STATIC] tab-1033
+[STATIC] tab-1033-btnWrap
+[STATIC] tab-1033-btnEl
+[STATIC] tab-1033-btnInnerEl
+[STATIC] tab-1033-btnIconEl
+[STATIC] tab-1034
+[STATIC] tab-1034-btnWrap
+[STATIC] tab-1034-btnEl
+[STATIC] tab-1034-btnInnerEl
+[STATIC] tab-1034-btnIconEl
+[STATIC] tabbar-1019-after-scroller
+[STATIC] tabbar-1019-strip
+[STATIC] portalcolumn-1020
+[STATIC] portalcolumn-1020-outerCt
+[STATIC] portalcolumn-1020-innerCt
+[STATIC] dataview-1035
+[2013-10-17 13:44:16 -0400] ERROR: Retrieval of attribute object timed out.
+[2013-10-17 13:44:16 -0400] The reason could be that the js is looping unexpectedly behind the scene (JS bug), or that the page changed during the search
+-- [LOCAL] quit firefox
+  should find the dom object for the html node
+
+Finished in 50.12 seconds
+1 example, 0 failures

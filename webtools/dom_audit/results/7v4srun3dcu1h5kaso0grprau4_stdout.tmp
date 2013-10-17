@@ -1,0 +1,369 @@
+Rakefile Args were: {:url=>"http://10.10.9.129", :username=>"3011", :userpass=>"1234"}
+url:/t/t/t http://10.10.9.129
+username:/t/t/t3011
+userpass:/t/t/t1234
+-- Display all set parameters --
+WR_DISPLAY:     		 :5
+FILE            		 /mnt/CAMERO/WT/webrobot-suite/webtools/dom_audit/dom_audit_webdriver.rb
+WR_INTERFACE:   		 local
+WR_RUNFILTER:   		 
+WR_FORCEDISPLAY:		 
+WR_FFONLY:      		 
+WR_NOTUNNEL:    		 
+/usr/bin/ruby1.9.1 -S rspec /mnt/CAMERO/WT/webrobot-suite/webtools/dom_audit/dom_audit_webdriver.rb -f documentation --color
+Arguments passed to webdriver testcode
+url:       http://10.10.9.129
+username:  3011
+userpass:  1234
+login url: http://10.10.9.129
+Run options: include {:local=>true}
+
+Inspect the webpage to scrape the DOM object
+-- [LOCAL] Starting firefox :
+[2013-10-17 13:45:30 -0400] Logging in
+[2013-10-17 13:45:30 -0400] Opening webpage
+[2013-10-17 13:45:31 -0400] Finding login element
+[2013-10-17 13:45:31 -0400] Finding password element
+[2013-10-17 13:45:31 -0400] Finding  submit element
+[2013-10-17 13:45:38 -0400] Requesting DOM object
+[2013-10-17 13:45:41 -0400] Finding html element
+[2013-10-17 13:45:41 -0400] Dumping DOM object to STDOUT
+[2013-10-17 13:45:41 -0400] Parsing the DOM structure for each ID
+[2013-10-17 13:45:41 -0400] Found the fllowing dynamic IDs
+[STATIC] ext-gen1021
+[STATIC] ppmPanelView-1026
+[STATIC] ppmPanelView-1026-body
+[STATIC] panel-1027
+[STATIC] panel-1027-body
+[STATIC] panel-1027-innerCt
+[STATIC] panel-1027-targetEl
+[STATIC] toolbar-1028
+[STATIC] toolbar-1028-innerCt
+[STATIC] toolbar-1028-targetEl
+[STATIC] tbspacer-1029
+[STATIC] tbspacer-1031
+[STATIC] buttongroup-1032
+[STATIC] buttongroup-1032_header
+[STATIC] buttongroup-1032_header-body
+[STATIC] buttongroup-1032_header-innerCt
+[STATIC] buttongroup-1032_header-targetEl
+[STATIC] buttongroup-1032_header_hd
+[STATIC] buttongroup-1032_header_hd-textEl
+[STATIC] buttongroup-1032-body
+[STATIC] ext-gen1441
+[STATIC] tbspacer-1033
+[STATIC] button-1034
+[STATIC] button-1034-btnWrap
+[STATIC] button-1034-btnEl
+[STATIC] button-1034-btnInnerEl
+[STATIC] button-1034-btnIconEl
+[STATIC] ext-gen1427
+[STATIC] ext-gen1426
+[STATIC] ext-gen1425
+[STATIC] tbfill-1035
+[STATIC] tbspacer-1036
+[STATIC] toolbar-1037
+[STATIC] toolbar-1037-innerCt
+[STATIC] toolbar-1037-targetEl
+[STATIC] searchView-1038
+[STATIC] searchView-1038-inputRow
+[STATIC] searchView-1038-labelCell
+[STATIC] searchView-1038-labelEl
+[STATIC] searchView-1038-bodyEl
+[STATIC] searchView-1038-triggerWrap
+[STATIC] searchView-1038-inputCell
+[STATIC] ext-gen1430
+[STATIC] searchView-1038-inputEl
+[STATIC] ext-gen1429
+[STATIC] ext-gen1428
+[STATIC] tbtext-1039
+[STATIC] tool-1092
+[STATIC] tool-1092-toolEl
+[STATIC] tabbar-1040
+[STATIC] tabbar-1040-body
+[STATIC] tabbar-1040-before-scroller
+[STATIC] tabbar-1040-innerCt
+[STATIC] tabbar-1040-targetEl
+[STATIC] tabbar-1040-after-scroller
+[STATIC] tabbar-1040-strip
+[STATIC] panel-1047
+[STATIC] panel-1047-body
+[STATIC] panel-1047-innerCt
+[STATIC] panel-1047-targetEl
+[STATIC] ext-gen1432
+[STATIC] ext-gen1431
+[STATIC] headercontainer-1048
+[STATIC] headercontainer-1048-innerCt
+[STATIC] headercontainer-1048-targetEl
+[STATIC] gridview-1049
+[2013-10-17 13:46:19 -0400] ERROR: Retrieval of attribute object timed out.
+[2013-10-17 13:46:19 -0400] The reason could be that the js is looping unexpectedly behind the scene (JS bug), or that the page changed during the search
+-- [LOCAL] quit firefox
+  should find the dom object for the html node
+
+Finished in 51.94 seconds
+1 example, 0 failures
+Rakefile Args were: {:url=>"http://10.10.9.129", :username=>"3011", :userpass=>"1234"}
+url:/t/t/t http://10.10.9.129
+username:/t/t/t3011
+userpass:/t/t/t1234
+-- Display all set parameters --
+WR_DISPLAY:     		 :5
+FILE            		 /mnt/CAMERO/WT/webrobot-suite/webtools/dom_audit/dom_audit_webdriver.rb
+WR_INTERFACE:   		 local
+WR_RUNFILTER:   		 
+WR_FORCEDISPLAY:		 
+WR_FFONLY:      		 
+WR_NOTUNNEL:    		 
+/usr/bin/ruby1.9.1 -S rspec /mnt/CAMERO/WT/webrobot-suite/webtools/dom_audit/dom_audit_webdriver.rb -f documentation --color
+Arguments passed to webdriver testcode
+url:       http://10.10.9.129
+username:  3011
+userpass:  1234
+login url: http://10.10.9.129
+Run options: include {:local=>true}
+
+Inspect the webpage to scrape the DOM object
+-- [LOCAL] Starting firefox :
+[2013-10-17 13:46:41 -0400] Logging in
+[2013-10-17 13:46:41 -0400] Opening webpage
+[2013-10-17 13:46:42 -0400] Finding login element
+[2013-10-17 13:46:42 -0400] Finding password element
+[2013-10-17 13:46:42 -0400] Finding  submit element
+[2013-10-17 13:46:50 -0400] Requesting DOM object
+[2013-10-17 13:46:52 -0400] Finding html element
+[2013-10-17 13:46:52 -0400] Dumping DOM object to STDOUT
+[2013-10-17 13:46:52 -0400] Parsing the DOM structure for each ID
+[2013-10-17 13:46:53 -0400] Found the fllowing dynamic IDs
+[STATIC] ext-gen1021
+[STATIC] ppmPanelView-1026
+[STATIC] ppmPanelView-1026-body
+[STATIC] panel-1027
+[STATIC] panel-1027-body
+[STATIC] panel-1027-innerCt
+[STATIC] panel-1027-targetEl
+[STATIC] toolbar-1028
+[STATIC] toolbar-1028-innerCt
+[STATIC] toolbar-1028-targetEl
+[STATIC] tbspacer-1029
+[STATIC] tbspacer-1031
+[STATIC] buttongroup-1032
+[STATIC] buttongroup-1032_header
+[STATIC] buttongroup-1032_header-body
+[STATIC] buttongroup-1032_header-innerCt
+[STATIC] buttongroup-1032_header-targetEl
+[STATIC] buttongroup-1032_header_hd
+[STATIC] buttongroup-1032_header_hd-textEl
+[STATIC] buttongroup-1032-body
+[STATIC] ext-gen1441
+[STATIC] tbspacer-1033
+[STATIC] button-1034
+[STATIC] button-1034-btnWrap
+[STATIC] button-1034-btnEl
+[STATIC] button-1034-btnInnerEl
+[STATIC] button-1034-btnIconEl
+[STATIC] ext-gen1427
+[STATIC] ext-gen1426
+[STATIC] ext-gen1425
+[STATIC] tbfill-1035
+[STATIC] tbspacer-1036
+[STATIC] toolbar-1037
+[STATIC] toolbar-1037-innerCt
+[STATIC] toolbar-1037-targetEl
+[STATIC] searchView-1038
+[STATIC] searchView-1038-inputRow
+[STATIC] searchView-1038-labelCell
+[STATIC] searchView-1038-labelEl
+[STATIC] searchView-1038-bodyEl
+[STATIC] searchView-1038-triggerWrap
+[STATIC] searchView-1038-inputCell
+[STATIC] ext-gen1430
+[STATIC] searchView-1038-inputEl
+[STATIC] ext-gen1429
+[STATIC] ext-gen1428
+[STATIC] tbtext-1039
+[STATIC] tool-1092
+[STATIC] tool-1092-toolEl
+[STATIC] tabbar-1040
+[STATIC] tabbar-1040-body
+[STATIC] tabbar-1040-before-scroller
+[STATIC] tabbar-1040-innerCt
+[STATIC] tabbar-1040-targetEl
+[STATIC] tabbar-1040-after-scroller
+[STATIC] tabbar-1040-strip
+[STATIC] panel-1047
+[STATIC] panel-1047-body
+[STATIC] panel-1047-innerCt
+[STATIC] panel-1047-targetEl
+[STATIC] ext-gen1432
+[STATIC] ext-gen1431
+[STATIC] headercontainer-1048
+[STATIC] headercontainer-1048-innerCt
+[STATIC] headercontainer-1048-targetEl
+[STATIC] gridview-1049
+[STATIC] gridview-1049-table
+[STATIC] gridview-1049-body
+[STATIC] component-1050
+[STATIC] panel-1052
+[STATIC] panel-1052-body
+[STATIC] panel-1052-outerCt
+[STATIC] panel-1052-innerCt
+[STATIC] splitter-1059
+[STATIC] splitter-1059-collapseEl
+[STATIC] tool-1093
+[STATIC] tool-1093-toolEl
+[STATIC] tabbar-1060
+[STATIC] tabbar-1060-body
+[STATIC] tabbar-1060-before-scroller
+[STATIC] tabbar-1060-innerCt
+[STATIC] tabbar-1060-targetEl
+[STATIC] tab-1087
+[STATIC] tab-1087-btnWrap
+[STATIC] tab-1087-btnEl
+[STATIC] tab-1087-btnInnerEl
+[STATIC] tab-1087-btnIconEl
+[STATIC] tab-1088
+[STATIC] tab-1088-btnWrap
+[STATIC] tab-1088-btnEl
+[STATIC] tab-1088-btnInnerEl
+[STATIC] tab-1088-btnIconEl
+[STATIC] tab-1089
+[STATIC] tab-1089-btnWrap
+[STATIC] tab-1089-btnEl
+[STATIC] tab-1089-btnInnerEl
+[STATIC] tab-1089-btnIconEl
+[STATIC] tab-1090
+[STATIC] tab-1090-btnWrap
+[STATIC] tab-1090-btnEl
+[STATIC] tab-1090-btnInnerEl
+[STATIC] tab-1090-btnIconEl
+[STATIC] tab-1091
+[STATIC] tab-1091-btnWrap
+[STATIC] tab-1091-btnEl
+[STATIC] tab-1091-btnInnerEl
+[STATIC] tab-1091-btnIconEl
+[STATIC] tabbar-1060-after-scroller
+[STATIC] tabbar-1060-strip
+[STATIC] panel-1071
+[STATIC] panel-1071-body
+[STATIC] panel-1071-innerCt
+[STATIC] panel-1071-targetEl
+[STATIC] ext-gen1437
+[STATIC] ext-gen1436
+[STATIC] headercontainer-1072
+[STATIC] headercontainer-1072-innerCt
+[STATIC] headercontainer-1072-targetEl
+[STATIC] gridview-1073
+[2013-10-17 13:47:31 -0400] ERROR: Retrieval of attribute object timed out.
+[2013-10-17 13:47:31 -0400] The reason could be that the js is looping unexpectedly behind the scene (JS bug), or that the page changed during the search
+-- [LOCAL] quit firefox
+  should find the dom object for the html node
+
+Finished in 53.21 seconds
+1 example, 0 failures
+Rakefile Args were: {:url=>"http://10.10.9.129", :username=>"3011", :userpass=>"1234"}
+url:/t/t/t http://10.10.9.129
+username:/t/t/t3011
+userpass:/t/t/t1234
+-- Display all set parameters --
+WR_DISPLAY:     		 :5
+FILE            		 /mnt/CAMERO/WT/webrobot-suite/webtools/dom_audit/dom_audit_webdriver.rb
+WR_INTERFACE:   		 local
+WR_RUNFILTER:   		 
+WR_FORCEDISPLAY:		 
+WR_FFONLY:      		 
+WR_NOTUNNEL:    		 
+/usr/bin/ruby1.9.1 -S rspec /mnt/CAMERO/WT/webrobot-suite/webtools/dom_audit/dom_audit_webdriver.rb -f documentation --color
+Arguments passed to webdriver testcode
+url:       http://10.10.9.129
+username:  3011
+userpass:  1234
+login url: http://10.10.9.129
+Run options: include {:local=>true}
+
+Inspect the webpage to scrape the DOM object
+-- [LOCAL] Starting firefox :
+[2013-10-17 13:50:51 -0400] Logging in
+[2013-10-17 13:50:51 -0400] Opening webpage
+[2013-10-17 13:50:51 -0400] Finding login element
+[2013-10-17 13:50:52 -0400] Finding password element
+[2013-10-17 13:50:52 -0400] Finding  submit element
+[2013-10-17 13:50:59 -0400] Requesting DOM object
+[2013-10-17 13:51:02 -0400] Finding html element
+[2013-10-17 13:51:02 -0400] Dumping DOM object to STDOUT
+[2013-10-17 13:51:02 -0400] Parsing the DOM structure for each ID
+[2013-10-17 13:51:02 -0400] Found the fllowing dynamic IDs
+[STATIC] ext-gen1021
+[STATIC] ppmPanelView-1026
+[STATIC] ppmPanelView-1026-body
+[STATIC] panel-1027
+[STATIC] panel-1027-body
+[STATIC] panel-1027-innerCt
+[STATIC] panel-1027-targetEl
+[STATIC] toolbar-1028
+[STATIC] toolbar-1028-innerCt
+[STATIC] toolbar-1028-targetEl
+[STATIC] tbspacer-1029
+[STATIC] tbspacer-1031
+[STATIC] buttongroup-1032
+[STATIC] buttongroup-1032_header
+[STATIC] buttongroup-1032_header-body
+[STATIC] buttongroup-1032_header-innerCt
+[STATIC] buttongroup-1032_header-targetEl
+[STATIC] buttongroup-1032_header_hd
+[STATIC] buttongroup-1032_header_hd-textEl
+[STATIC] buttongroup-1032-body
+[STATIC] ext-gen1441
+[STATIC] tbspacer-1033
+[STATIC] button-1034
+[STATIC] button-1034-btnWrap
+[STATIC] button-1034-btnEl
+[STATIC] button-1034-btnInnerEl
+[STATIC] button-1034-btnIconEl
+[STATIC] ext-gen1427
+[STATIC] ext-gen1426
+[STATIC] ext-gen1425
+[STATIC] tbfill-1035
+[STATIC] tbspacer-1036
+[STATIC] toolbar-1037
+[STATIC] toolbar-1037-innerCt
+[STATIC] toolbar-1037-targetEl
+[STATIC] searchView-1038
+[STATIC] searchView-1038-inputRow
+[STATIC] searchView-1038-labelCell
+[STATIC] searchView-1038-labelEl
+[STATIC] searchView-1038-bodyEl
+[STATIC] searchView-1038-triggerWrap
+[STATIC] searchView-1038-inputCell
+[STATIC] ext-gen1430
+[STATIC] searchView-1038-inputEl
+[STATIC] ext-gen1429
+[STATIC] ext-gen1428
+[STATIC] tbtext-1039
+[STATIC] tool-1092
+[STATIC] tool-1092-toolEl
+[STATIC] tabbar-1040
+[STATIC] tabbar-1040-body
+[STATIC] tabbar-1040-before-scroller
+[STATIC] tabbar-1040-innerCt
+[STATIC] tabbar-1040-targetEl
+[STATIC] tabbar-1040-after-scroller
+[STATIC] tabbar-1040-strip
+[STATIC] panel-1047
+[STATIC] panel-1047-body
+[STATIC] panel-1047-innerCt
+[STATIC] panel-1047-targetEl
+[STATIC] ext-gen1432
+[STATIC] ext-gen1431
+[STATIC] headercontainer-1048
+[STATIC] headercontainer-1048-innerCt
+[STATIC] headercontainer-1048-targetEl
+[STATIC] gridview-1049
+[STATIC] gridview-1049-table
+[2013-10-17 13:51:40 -0400] ERROR: Retrieval of attribute object timed out.
+[2013-10-17 13:51:40 -0400] The reason could be that the js is looping unexpectedly behind the scene (JS bug), or that the page changed during the search
+-- [LOCAL] quit firefox
+  should find the dom object for the html node
+
+Finished in 52.44 seconds
+1 example, 0 failures

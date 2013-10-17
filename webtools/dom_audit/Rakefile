@@ -1,0 +1,241 @@
+require 'rspec/core/rake_task'
+#require "shellwords"
+
+#../../webrobot-suite/webtester2/lib/
+
+desc 'Default: run tests against the selenium driver on the local machine (components should be currently running)'
+namespace :spec do
+  RSpec::Core::RakeTask.new(:sauce) do |t|
+	
+		ENV['WR_INTERFACE'] = ENV['WR_INTERFACE'].nil? ? "sauce" : ENV['WR_INTERFACE']		
+		
+		if ! ENV['WR_DEBUG'].nil?
+			Rake::Task["env:display"].reenable
+			Rake::Task["env:display"].invoke
+		end
+			
+		# opt
+		t.pattern = ENV["FILE"].nil? ? ["./tests/**/*_test.rb","./tests/*_test.rb"] : ENV["FILE"]
+		t.rspec_opts = ['-f documentation', '--color']
+		t.verbose = true
+  end
+end
+
+desc 'Setup and teardown features, run tests against the selenium driver'
+namespace :local do
+
+	desc "Setup fixtures for HEADED and execute the tests. WR_DISPLAY=:5 will override the DISPLAY used."
+	RSpec::Core::RakeTask.new(:headed) do |t|
+	
+			ENV['WR_DISPLAY'] = ENV['WR_DISPLAY'].nil? ? ':5' : ENV['WR_DISPLAY']
+			ENV['WR_INTERFACE'] = ENV['WR_INTERFACE'].nil? ? "local" : ENV['WR_INTERFACE']
+			
+			if ! ENV['WR_DEBUG'].nil?
+				Rake::Task["env:display"].reenable
+				Rake::Task["env:display"].invoke
+			end
+			
+			# Kill any previously running server
+			Rake::Task["vnc:kill"].reenable
+			Rake::Task["vnc:kill"].invoke
+			Rake::Task["xvfb:kill"].reenable
+			Rake::Task["xvfb:kill"].invoke
+			# Start the VNC server
+			Rake::Task["vnc:start"].reenable
+			Rake::Task["vnc:start"].invoke
+			
+			# opt
+			t.pattern = ENV["FILE"].nil? ? ["./tests/**/*_test.rb","./tests/*_test.rb"] : ENV["FILE"]
+			t.rspec_opts = ['-f documentation', '--color']
+			t.verbose = true
+	end
+	
+	desc "Setup the fixtures for running HEADLESS and execute the tests. WR_DISPLAY=:5 will override the DISPLAY used."
+	RSpec::Core::RakeTask.new(:headless) do |t|
+	
+			ENV['WR_DISPLAY'] = ENV['WR_DISPLAY'].nil? ? ':5' : ENV['WR_DISPLAY']
+			ENV['WR_INTERFACE'] = ENV['WR_INTERFACE'].nil? ? "local" : ENV['WR_INTERFACE']
+			
+			if ! ENV['WR_DEBUG'].nil?
+				Rake::Task["env:display"].reenable
+				Rake::Task["env:display"].invoke
+			end
+			
+			# Kill any previously running server
+			Rake::Task["vnc:kill"].reenable
+			Rake::Task["vnc:kill"].invoke
+			Rake::Task["xvfb:kill"].reenable
+			Rake::Task["xvfb:kill"].invoke
+			# Start the Xvfb server
+			Rake::Task["xvfb:start"].reenable
+			Rake::Task["xvfb:start"].invoke			
+			# opt
+			t.pattern = ENV["FILE"].nil? ? ["./tests/**/*_test.rb","./tests/*_test.rb"] : ENV["FILE"]
+			t.rspec_opts = ['-f documentation', '--color']
+			t.verbose = true
+			
+			ENV
+	end
+
+	namespace :nofixtures do
+	
+		desc "SKIP the fixtures for running HEADED and execute the tests"
+		RSpec::Core::RakeTask.new(:headed) do |t|
+						
+			ENV['DISPLAY'] = ENV['WR_DISPLAY'] = ENV['WR_DISPLAY'].nil? ? ':5' : ENV['WR_DISPLAY']
+			ENV['WR_INTERFACE'] = ENV['WR_INTERFACE'].nil? ? "local" : ENV['WR_INTERFACE']
+			
+			if ! ENV['WR_DEBUG'].nil?
+				Rake::Task["env:display"].reenable
+				Rake::Task["env:display"].invoke
+			end
+			
+			# opt
+			t.rspec_opts = ['-f documentation', '--color']
+			t.pattern = ENV["FILE"].nil? ? ["./tests/**/*_test.rb","./tests/*_test.rb"] : ENV["FILE"]
+			t.verbose = true
+		end
+		
+		desc "SKIP the fixtures for running HEADLESS and execute the tests"
+	  RSpec::Core::RakeTask.new(:headless) do |t|
+			puts "display = " + ENV['DISPLAY']
+			ENV['DISPLAY'] = ENV['WR_DISPLAY'] = ENV['WR_DISPLAY'].nil? ? ':5' : ENV['WR_DISPLAY']
+			ENV['WR_INTERFACE'] = ENV['WR_INTERFACE'].nil? ? "local" : ENV['WR_INTERFACE']
+			
+			if ! ENV['WR_DEBUG'].nil?
+				Rake::Task["env:display"].reenable
+				Rake::Task["env:display"].invoke
+			end	
+			
+			# opt
+			t.pattern = ENV["FILE"].nil? ? ["./tests/**/*_test.rb","./tests/*_test.rb"] : ENV["FILE"]
+			t.rspec_opts = ['-f documentation']
+			t.verbose = true
+		end	
+	end
+end
+
+	namespace :custom do
+	
+		RSpec::Core::RakeTask.new(:domaudit, :url, :username, :userpass) do |t, args|
+			puts "Rakefile Args were: #{args}"
+			puts "url:/t/t/t " + args['url']
+			puts "username:/t/t/t" + args['username']
+			puts "userpass:/t/t/t" + args['userpass']
+			
+			ENV['WR_URL'] = args['url']
+			ENV['WR_USERNAME'] = args['username']
+			ENV['WR_USERPASS'] = args['userpass']
+						
+			ENV['DISPLAY'] = ENV['WR_DISPLAY'] = ENV['WR_DISPLAY'].nil? ? ':5' : ENV['WR_DISPLAY']
+			ENV['WR_INTERFACE'] = ENV['WR_INTERFACE'].nil? ? "local" : ENV['WR_INTERFACE']
+			
+			if ! ENV['WR_DEBUG'].nil?
+				Rake::Task["env:display"].reenable
+				Rake::Task["env:display"].invoke
+			end
+			
+			# opt
+			#t.rspec_opts = ['-f documentation', '--t ' + args['url'].to_s, '--color']#, '-tusername ' + args['username'], '-tuserpass ' + args['userpass']]
+			t.rspec_opts = ['-f documentation', '--color']
+			t.pattern = ENV["FILE"].nil? ? ["./tests/**/*_test.rb","./tests/*_test.rb"] : ENV["FILE"]
+			t.verbose = true
+		end
+end
+
+# RSpec::Core::RakeTask.new(:argtest, :url, :user) do |t, args|
+	# puts "-------- Args were: #{args}"
+# end
+
+# load up garlic if it's here
+# if File.directory?(File.join(File.dirname(__FILE__), 'garlic'))
+  # require File.join(File.dirname(__FILE__), 'garlic/lib/garlic_tasks')
+  # require File.join(File.dirname(__FILE__), 'garlic')
+# end
+
+# desc "clone the garlic repo (for running ci tasks)"
+# task :get_garlic do
+  # sh "git clone git://github.com/ianwhite/garlic.git garlic"
+# end
+
+# # Run all features or one file
+# t.pattern = ENV["FILE"].blank? ? ["spec/features/*.rb","spec/features/**/*.rb"] : ENV["FILE"]
+
+# # Make rspec pretty
+# t.rspec_opts = ['-f documentation', '--color']
+
+# namespace :bootstrap do
+	# desc "start selenium server"
+	# task :start do
+		# %x{java -jar /home/packages/selenium-server-standalone-2.28.0.jar 2>/dev/null >/dev/null &}
+	# end
+# end
+
+##########################################################################
+# FIXTURES
+##########################################################################
+
+namespace :xvfb do
+
+  desc "Xvfb break down"
+  task :kill do
+    # System call kill all Xvfb processes
+    %x{killall Xvfb}
+  end
+
+  desc "Xvfb setup"
+  task :start do
+    # This is what links the server to the test
+    #ENV["DISPLAY"] = ":99"
+    # System call to start the server on display :99
+    %x{Xvfb #{ENV['WR_DISPLAY']} 2>/dev/null >/dev/null &}
+  end
+end
+
+namespace :vnc do
+
+  desc "vnc break down"
+  task :kill do
+    # System call kill vnc4server on display :99
+    %x{vncserver -kill #{ENV['WR_DISPLAY']}}
+  end
+	
+	desc "vnc setup"
+  task :start do
+    # This is what links the server to the test
+    #ENV["DISPLAY"] = ":5"
+    # System call to start the server on display :99
+    %x{vncserver #{ENV['WR_DISPLAY']} 2>/dev/null >/dev/null &}
+  end
+	
+  desc "vnc setup"
+  task :start do
+    # This is what links the server to the test
+    #ENV["DISPLAY"] = ":5"
+    # System call to start the server on display :99
+    %x{vncserver #{ENV['WR_DISPLAY']} &}
+  end
+
+	desc "vnc firefox setup"
+  task :firefox do
+    # System call to start f irefox on display :99
+    %x{firefox 2>/dev/null >/dev/null &}
+  end
+
+end
+
+namespace :env do
+
+	desc "Display all internally set ENV variables"
+	task :display do
+		puts "-- Display all set parameters --"
+		puts "WR_DISPLAY:     \t\t #{ENV['WR_DISPLAY']}"
+		puts "FILE            \t\t #{ENV['FILE']}"
+		puts "WR_INTERFACE:   \t\t #{ENV['WR_INTERFACE']}"
+		puts "WR_RUNFILTER:   \t\t #{ENV['WR_RUNFILTER']}"
+		puts "WR_FORCEDISPLAY:\t\t #{ENV['WR_FORCEDISPLAY']}"
+		puts "WR_FFONLY:      \t\t #{ENV['WR_FFONLY']}"
+		puts "WR_NOTUNNEL:    \t\t #{ENV['WR_NOTUNNEL']}"
+	end
+	
+end
